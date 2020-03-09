@@ -32,6 +32,14 @@ class App extends Component {
 
   onButtonSubmit = () => {
     console.log('click');
+    app.models.predict("95c737e90dbe4ca485534df49d810c56", "https://samples.clarifai.com/face-det.jpg").then(
+    function(response) {
+      // do something with response
+    },
+    function(err) {
+      // there was an error
+    }
+  );
   }
 
   render() {
